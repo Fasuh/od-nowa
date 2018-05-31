@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Test</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+		<script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="./scripts.js"></script>
+    </head>
+    <body>
+		<!--<div id="login">
+			<div id="block"></div>
+			<div id="block2">Podaj nick:<br/><input type="textbox" id="nickname"/><button id="nconfirm">Confirm</button></div>
+		</div>-->
+        <div id="wrapper">				
+			<div id="timer"></div>
+			<div id="info"></div><br>
+			<div id="playground">
+				<div id="online">
+				</div> 
+				<div id="gamecontainer">
+					<!--<div id="blocker">
+					</div>-->
+					<canvas id="gamecanvas" width = "640" height = "480" id = "testcanvas" style = "border:black 1px solid;">
+						Your browser does not support HTML5 Canvas. Please shift to another browser.
+					</canvas>
+					<div id="test"></div>
+					<div id="przybornik">
+						<button id="clear">Clear</button>
+						<input type="text" id="radius" value="10"/>
+						<select id="color">
+							<option value="black">Black</option>
+							<option value="red">Red</option>
+							<option value="blue">Blue</option>
+							<option value="yellow">Yellow</option>
+							<option value="pink">Pink</option>
+							<option value="purple">Purple</option>
+							<option value="green">Green</option>
+							<option value="white">White</option>
+						</select>
+					</div>
+				</div>
+				<div id="chat">
+					<div id="content"></div>
+						<div>
+							<div style="margin-top:5px"><span id="nick">...</span></div>
+							<form action="">
+								<input type="text" id="input"/>
+							</form>
+						</div>
+				</div>	
+			</div>			
+		</div>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+font-family:tahoma; font-size:12px; padding:0px;margin:1px;}
+    p {line-height:18px; }
+
+    #content { padding:5px; background:#ddd; border-radius:5px;
+        overflow-y: scroll; border:1px solid #CCC;
+        margin-top:10px; margin-left:10px; height: 400px;width:300px; float:left;}
+    #input { margin-left:10px; border-radius:2px; border:1px solid #ccc;
+	margin-top:10px; padding:5px; width:300px;}
+	#nick{margin-left:10px;}
+	
+#online { 
+	padding:5px;
+	background:#ddd;
+	border-radius:5px;
+	overflow-y: scroll;
+	border:1px solid #CCC;
+	margin-top:10px;
+	margin-left:10px;
+	height: 400px;
+	width:200px;
+	font-size:30px;
+	float:left;
+}
+#wrapper{
+	padding:10%;
+	padding-top:2%;
+	width:80%;
+	margin:1px;
+}
+#gamecontainer{
+	margin-left:10px;
+	float:left;
+}
+#chat{
+	width:150px;
+	float:left;
+}
+#block{
+	height:100%;
+	width:100%;
+	position:absolute;
+	background-color:black;
+	z-index:2;
+	opacity:0.5;
+	color:black;
+	text-decoration:none;
+}
+#blocker{
+	width: 640px;
+	height: 480px;
+}
+#block2{
+	width:200px;
+	height:100px;
+	background-color:darkgray;
+	opacity:1;
+	color:black;
+	z-index:3;
+	position:absolute;
+	margin-left:42%;
+	margin-right:42%;
+	margin-top:20%;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:50px;
+	text-align:center;
+}
+#login{
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+#przybornik{
+	visibility:hidden;
+}
+#playground{
+	width:1300px;
+	height:500px;
+	float:left;
+	margin:10px;
+}
+#info{
+	background-color:green;
+	width:1000px;
+	height:70px;
+	color:white;
+	font-weight:bold;
+	text-align:center;
+	float:left;
+	font-size:40px;
+}
+#timer{
+	background-color:darkgreen;
+	width:70px;
+	height:70px;
+	color:white;
+	text-weight:bold;
+	float:left;
+	text-align:center;
+	font-size:40px;
+}
