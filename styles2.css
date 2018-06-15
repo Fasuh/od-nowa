@@ -1,0 +1,120 @@
+
+#main-wrapper
+{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+
+#header-container
+{
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+#bob-text
+{
+  display: flex;
+  color: #000;
+  font-size: 30px;
+  line-height: 10px;
+}
+
+#bob
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer-text
+{
+  display: flex;
+  color: #000;
+  font-size: 20px;
+}
+
+#timer
+{
+  display: flex;
+  position: relative;
+  order: 0;
+  height: 100%;
+  width: 3.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+#andrzej
+{
+  display: flex;
+  position: relative;
+  width: 60%;
+  height: 3em;
+  background: #9af3e2;
+  border-radius: 3px;
+  box-shadow: #00000078 1px 1px 1px -1px;
+}
+
+#header
+{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 15em;
+  margin-top: 1em;
+  order: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#name
+{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  order: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo
+{
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 20em;
+}
+
+.flex_horizontal
+{
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_vertical
+{
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body, span, div, h1, h2, h3, font
+{
+  display: inherit;
+  visibility: inherit;
+  background: inherit;
+  color:inherit;
+}

@@ -1,101 +1,224 @@
-font-family:tahoma; font-size:12px; padding:0px;margin:1px;}
-    p {line-height:18px; }
+#content{
+    background:#ddd;
+    overflow-y: scroll;
+    border:1px solid #CCC;
+    height: 80%;
+    width:100%;
+    margin-bottom:1%;
+}
+#input{
+    border-radius:2px;
+    border:1px solid #ccc;
+    width:100%;
+    margin-top:1%;
+}
+#nick{
+    margin:1%;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
 
-    #content { padding:5px; background:#ddd; border-radius:5px;
-        overflow-y: scroll; border:1px solid #CCC;
-        margin-top:10px; margin-left:10px; height: 400px;width:300px; float:left;}
-    #input { margin-left:10px; border-radius:2px; border:1px solid #ccc;
-	margin-top:10px; padding:5px; width:300px;}
-	#nick{margin-left:10px;}
-	
-#online { 
-	padding:5px;
-	background:#ddd;
-	border-radius:5px;
-	overflow-y: scroll;
-	border:1px solid #CCC;
-	margin-top:10px;
-	margin-left:10px;
-	height: 400px;
-	width:200px;
-	font-size:30px;
-	float:left;
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color:lightgray;
+}
+#online {
+    background:#ddd;
+    border-radius:5px;
+    overflow-y: scroll;
+    border:1px solid #CCC;
+    height: 90%;
+    width:20%;
+    font-size:30px;
+    float:left;
 }
 #wrapper{
-	padding:10%;
-	padding-top:2%;
-	width:80%;
-	margin:1px;
+    width:90%;
+    height:50%;
+    margin-top:4%;
+    margin-left:5%;
+    margin-right:5%;
 }
 #gamecontainer{
-	margin-left:10px;
-	float:left;
+    float:left;
+    height:100%;
+    width:47%;
+    margin-left:1%;
+    margin-right:1%;
+}
+#gamecanvas{
+    width: 100%;
+    height: 90%
 }
 #chat{
-	width:150px;
-	float:left;
+    width:30%;
+    float:left;
+    height:100%;
 }
 #block{
-	height:100%;
-	width:100%;
-	position:absolute;
-	background-color:black;
-	z-index:2;
-	opacity:0.5;
-	color:black;
-	text-decoration:none;
+    height:100%;
+    width:100%;
+    position:absolute;
+    background-color:black;
+    z-index:2;
+    opacity:0.5;
+    color:black;
+    text-decoration:none;
 }
 #blocker{
-	width: 640px;
-	height: 480px;
+    width: 640px;
+    height: 480px;
 }
 #block2{
-	width:200px;
-	height:100px;
-	background-color:darkgray;
-	opacity:1;
-	color:black;
-	z-index:3;
-	position:absolute;
-	margin-left:42%;
-	margin-right:42%;
-	margin-top:20%;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:50px;
-	text-align:center;
+    width:200px;
+    height:100px;
+    background-color:darkgray;
+    opacity:1;
+    color:black;
+    z-index:3;
+    position:absolute;
+    margin-left:42%;
+    margin-right:42%;
+    margin-top:20%;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:50px;
+    text-align:center;
 }
 #login{
-	width:100%;
-	height:100%;
-	position:absolute;
+    width:100%;
+    height:100%;
+    position:absolute;
 }
 #przybornik{
-	visibility:hidden;
+    visibility:hidden;
 }
 #playground{
-	width:1300px;
-	height:500px;
-	float:left;
-	margin:10px;
+    width:100%;
+    height:93%;
+    float:left;
 }
 #info{
-	background-color:green;
-	width:1000px;
-	height:70px;
-	color:white;
-	font-weight:bold;
-	text-align:center;
-	float:left;
-	font-size:40px;
+    background-color:lightgray;
+    width:90%;
+    height:11%;
+    font-weight:bold;
+    text-align:center;
+    float:left;
+    font-size:2.2vw;
+    margin:0 auto;
+    margin-bottom:1%;
+    font-family: 'Prosto One', cursive;
 }
 #timer{
-	background-color:darkgreen;
-	width:70px;
-	height:70px;
-	color:white;
-	text-weight:bold;
-	float:left;
-	text-align:center;
-	font-size:40px;
+    background-color:gray;
+    width:10%;
+    height:11%;
+    color:white;
+    text-weight:bold;
+    float:left;
+    text-align:center;
+    font-size:2.5vw;
+    margin-bottom:1%;
+    font-family: 'Prosto One', cursive;
+}
+#main{
+    height:135%;
+    width:100%;
+}
+#page{
+    background-color:white;
+    height:100%;
+    width:75%;
+    margin-left:12.5%;
+    margin-right:12.5%;
+}
+#logo{
+    height:20%;
+    width:30%;
+    float:left;
+    position: relative;
+    font-family: 'Luckiest Guy', cursive;
+    font-size:15vw;
+    text-align:center;
+}
+#header{
+    position: relative;
+    height:15%;
+    width:70%;
+    font-weight:bold;
+    text-align:center;
+    float:left;
+    font-size:4vw;
+    font-family: 'Prosto One', cursive;
+}
+#menu{
+    height:4%;
+    width:69%;
+    float:left;
+    border-left:3px solid gray;
+    border-top:3px solid gray;
+
+}
+#body{
+    height:80%;
+    width:100%;
+    float:left;
+}
+.button{
+    background-color:#f7f2ee;
+    width:25%;
+    position: relative;
+    height:100%;
+    font-weight:bold;
+    float:left;
+    font-size:1.1vw;
+    font-family: 'Prosto One', cursive;
+    text-decoration:none;
+
+    -webkit-transition: background-color 0.5s;
+    -moz-transition:    background-color 0.5s;
+    -ms-transition:     background-color 0.5s;
+    -o-transition:      background-color 0.5s;
+    transition:         background-color 0.5s;
+}
+.button:hover{
+    background-color:lightgray;
+}
+.menu{
+    text-decoration: none;
+    color:black;
+}
+#texting{
+    font-size:1.1vw;
+    font-family: 'Prosto One', cursive;
+    text-align:center;
+}
+.center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.responsive{
+    width:auto;
+    height:100%;
 }
