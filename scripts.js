@@ -9,7 +9,7 @@ $(document).ready(function() {
 	var sketch=false;
 	var timing=0;
 	var wait;
-	var socket = io('http://192.168.0.2:3000');
+	var socket = io('ws://127.0.0.1:3000');
 	$(function () {
 		$('form').submit(function(){
 
@@ -96,9 +96,11 @@ $(document).ready(function() {
 			}
 		});
 		socket.on('onlist', function(list){
-			var nick = JSON.parse(list.name);
-			var points = JSON.parse(list.points);
-			
+			var listt = JSON.parse(list);
+			console.log("list: "+list);
+			var nick = listt.name;
+			var points = listt.points;
+
 			document.getElementById("online").innerHTML="";
 			for(i=1;i<=nick.length;i++){
 				document.getElementById("online").innerHTML+="<b>"+i+". "+nick[i-1]+"  "+points[i-1]
@@ -115,7 +117,7 @@ $(document).ready(function() {
 			redraw();
 		});
 	});
-	
+
 	function addMessage(author, message, color, dt) {
 		if(color=="whoolean"){
 			document.getElementById("content").innerHTML+='<p><span style="color:red"><b>'+message+' dolaczyl do gry!</b></span></p>';
@@ -139,14 +141,14 @@ $(document).ready(function() {
 	var colored = new Array();
 	var size = new Array();
 	var paint;
-	
-	
+
+
 		function draw(){
 			canvas = document.getElementById("gamecanvas");
 			context = canvas.getContext("2d");
 			// clear the canvas
 			context.lineJoin = "round";
-			//for(var i=0; i < clickX.length; i++) {		
+			//for(var i=0; i < clickX.length; i++) {
 			context.beginPath();
 			//..draw all the points
 			if(clickDrag[clickDrag.length-1]){
@@ -162,16 +164,16 @@ $(document).ready(function() {
 		  //}
 			context.strokeStyle = "black"; // isnt working without it dunnno why
 		}
-		
+
 		function redraw(){
 			canvas = document.getElementById("gamecanvas");
 			context = canvas.getContext("2d");
 			// clear the canvas
 			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-			  
+
 
 			context.lineJoin = "round";
-			for(var i=0; i < clickX.length; i++) {		
+			for(var i=0; i < clickX.length; i++) {
 				context.beginPath();
 				//draw all the points
 				if(clickDrag[i]){
@@ -190,9 +192,9 @@ $(document).ready(function() {
 		function cleard(){
 			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 		}
-	
-	
-	
+
+
+
 	$("#gamecanvas").mousedown(function(){
 		 // mouse position
 		if(sketch==false) return;
@@ -219,10 +221,10 @@ $(document).ready(function() {
     $(this).unbind('mousemove');
 	});
 	$("#gamecanvas").mouseleave(function(){
-		// stop drawing after leaving 
+		// stop drawing after leaving
 		$("#gamecanvas").unbind('mousemove');
 	});
-	
+
 	$("#clear").click(function(){
 			socket.emit('clear', true);
 			clearine();
@@ -238,7 +240,7 @@ $(document).ready(function() {
 			colored=[];
 			size=[];
 	}
-	
+
 	function addClick(x, y, color, dragging)
 	{
 		// add all the points to the arrays
